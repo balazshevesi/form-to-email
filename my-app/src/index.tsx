@@ -47,6 +47,10 @@ const Table = ({ data }: { data: any }) => {
 //   }),
 // );
 
+app.get("/", async (c) => {
+  return c.text("the api is working");
+});
+
 app.post("/:sendToEmail", async (c) => {
   const sendToEmail = c.req.param("sendToEmail");
 
