@@ -42,13 +42,12 @@ app.use(
   "*",
   cors({
     origin: [
-      "http://localhost:4321/",
-      "http://localhost:3000/",
-      "https://resmash.com/",
-      "https://spindelsanering-goteborg.vercel.app/",
+      "http://localhost:4321",
+      "http://localhost:3000",
+      "https://resmash.com",
+      "https://spindelsanering-goteborg.vercel.app",
     ],
     allowMethods: ["GET", "POST", "PUT", "DELETE"],
-    allowHeaders: ["Content-Type"],
   }),
 );
 
