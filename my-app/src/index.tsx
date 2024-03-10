@@ -38,14 +38,19 @@ const Table = ({ data }: { data: any }) => {
   );
 };
 
-// app.use(
-//   "/*",
-//   cors({
-//     origin: ["https://example.com", "https://example.org"],
-//     allowMethods: ["GET", "POST", "PUT", "DELETE"],
-//     allowHeaders: ["Content-Type"],
-//   }),
-// );
+app.use(
+  "*",
+  cors({
+    origin: [
+      "http://localhost:4321/",
+      "http://localhost:3000/",
+      "https://resmash.com/",
+      "https://spindelsanering-goteborg.vercel.app/",
+    ],
+    allowMethods: ["GET", "POST", "PUT", "DELETE"],
+    allowHeaders: ["Content-Type"],
+  }),
+);
 
 app.get("/", async (c) => {
   return c.text("the api is working");
