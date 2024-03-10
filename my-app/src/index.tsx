@@ -1,6 +1,7 @@
 import { Button, Html, Tailwind } from "@react-email/components";
 import { render } from "@react-email/render";
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 
 const nodemailer = require("nodemailer");
 
@@ -36,6 +37,15 @@ const Table = ({ data }: { data: any }) => {
     </TailwindWrapper>
   );
 };
+
+// app.use(
+//   "/*",
+//   cors({
+//     origin: ["https://example.com", "https://example.org"],
+//     allowMethods: ["GET", "POST", "PUT", "DELETE"],
+//     allowHeaders: ["Content-Type"],
+//   }),
+// );
 
 app.post("/:sendToEmail", async (c) => {
   const sendToEmail = c.req.param("sendToEmail");

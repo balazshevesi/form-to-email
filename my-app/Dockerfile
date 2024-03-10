@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN bun install
 
-ENV PORT = 8080
-EXPOSE 8080
+ENV PORT = 8001
+EXPOSE 8001
 
 CMD ["bun", "run", "dev"]
