@@ -30,7 +30,7 @@ const Table = ({ data }: { data: any }) => {
   return (
     <TailwindWrapper>
       {arrayOfKeyValuePairs.map((item, i) => (
-        <div>
+        <div key={i}>
           {item.key}: {item.value}
         </div>
       ))}
@@ -46,6 +46,7 @@ app.use(
       "http://localhost:3000",
       "https://resmash.com",
       "https://spindelsanering-goteborg.vercel.app",
+      "https://www.spindelsanering-goteborg.se",
     ],
     allowMethods: ["GET", "POST", "PUT", "DELETE"],
   }),
