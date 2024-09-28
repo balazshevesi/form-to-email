@@ -45,6 +45,7 @@ app.use(
       "http://localhost:4321",
       "http://localhost:3000",
       "https://resmash.com",
+      "https://www.resmash.com",
       "https://spindelsanering-goteborg.vercel.app",
       "https://www.spindelsanering-goteborg.se",
     ],
